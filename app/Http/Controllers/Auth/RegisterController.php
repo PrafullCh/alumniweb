@@ -49,7 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'rollno'=>['required','nullable','string'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'role' => ['required', 'string', 'max:255'],
+            'yearofgrad'=>['required','nullable','string'],
+            'dept' => ['required', 'string', 'max:255'],
+            'currloc' => ['required', 'string', 'max:255'],
+            'hometown' => ['required', 'string', 'max:255'],
+            'company' => ['required', 'string', 'max:255'],
+            'designation' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,7 +73,16 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'rollno'=>$data['rollno'],
+            'firstname'=>$data['firstname'],
+            'lastname'=>$data['lastname'],
+            'role'=>$data['role'],
+            'yearofgrad'=>$data['yearofgrad'],
+            'dept'=>$data['dept'],
+            'currloc'=>$data['currloc'],
+            'hometown'=>$data['hometown'],
+            'company'=>$data['company'],
+            'designation'=>$data['designation'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

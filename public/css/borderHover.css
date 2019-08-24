@@ -1,0 +1,45 @@
+.customStyle{
+    border:1px grey solid ;
+    transition:all .3s ease-in-out;
+}
+.customStyle:hover{
+    border-left: 1rem solid;
+}
+
+.borderStyle{
+    
+    transition:all .3s ease-in-out;
+}
+.borderStyle:hover{
+    border-bottom:1px black solid ;
+}
+.inputStyle{
+    transition:all .3s ease-in-out;
+    background-color: black;
+    height: 15px;
+    width: 15px;
+}
+.inputStyle:hover{
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.styleImg{
+    border-radius: 50%;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+}
+.tableStyle td{
+    width: 10px;
+    
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .tableStyle td{
+        width: 60px;
+    }
+  }
+
+.backgroundStyle{
+    background-color: red;
+}
+  

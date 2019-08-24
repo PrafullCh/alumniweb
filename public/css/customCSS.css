@@ -1,0 +1,16 @@
+body{
+    padding: 0;
+    background: url("http://localhost:82/alumniWeb/public/images/background/background-index.jpg") no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+/* Set your background color */
+.bg-custom {
+    background-color: #333
+}
+/* Transition effect */
+.navbar {
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}

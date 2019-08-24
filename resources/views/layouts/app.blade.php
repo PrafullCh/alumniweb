@@ -3,33 +3,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <!-- Title of page -->
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- CSS - links -->
+      <!-- Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700|Muli:300,400" rel="stylesheet">
+          <link rel="dns-prefetch" href="//fonts.gstatic.com">
+          <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset('public/css/carousel.css') }}" rel="stylesheet">
+    <!-- Animate - links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="public/css/aos.css">
+    <!-- Bootsrtap CDN -->
+    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/menuBarStyle.css') }}" rel="stylesheet">
+    <!-- Jquery -->
+    <script src="{{ asset('public/js/app.js') }}" ></script>
+    <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
+    @if (isset($page))
+              @if($page=="contact")
+                    <link rel="stylesheet" href="public/fonts/icomoon/style.css">
+                    <link rel="stylesheet" href="public/css/jquery-ui.css">
+                    <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+                    <link rel="stylesheet" href="public/css/owl.theme.default.min.css">
+                    <link rel="stylesheet" href="public/css/owl.theme.default.min.css">
+                    <link rel="stylesheet" href="public/css/jquery.fancybox.min.css">
+                    <link rel="stylesheet" href="public/css/bootstrap-datepicker.css">
+                    <link rel="stylesheet" href="public/fonts/flaticon/font/flaticon.css">
+                    
+                    <link href="public/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+                    <link rel="stylesheet" href="public/css/style.css">
+              @endif  
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" ></script>
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script-->
-    
-    <!--Mathjax cdn-->
-    <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
-<script type="text/javascript" async
-  src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-    
+              @if($page=="about")
+                    <script src="{{ asset('public/js/jquery.slim.min.js') }}" ></script>
+                    <link rel="stylesheet" href="{{asset('public/css/about.css')}}">
+              @endif
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+              @if ($page=="directory")
+                    <link href="{{ asset('public/css/borderHover.css') }}" rel="stylesheet">
+              @endif
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+              @if ($page=="yearbook")
+                    
+              @endif
+    @endif
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -39,25 +59,21 @@
         -ms-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
+      body{
+        background-color:red !important;
+      }
     </style>
 </head>
-<body>
-    <div id="app">
-        
+<body @if(isset($page)) @if($page=="contact") data-spy="scroll" data-target=".site-navbar-target" data-offset="300" @endif @endif>
         @include('inc.navbar')
        
         @include('inc.messages')
         @yield('content') 
         @include('inc.footer')
-       
-        
-    </div>
-
 </body>
 </html>
