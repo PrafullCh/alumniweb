@@ -1,13 +1,20 @@
-@if(isset($page))
-@if($page=="index")
-<div class="container">
-  <div class="row">
-      <img src="{{asset('public/images/main-logo.png')}}" class="animated fadeIn delay-1s img-responsive mx-auto" width="80%"  height="30%" alt="">
-  </div>
-</div>
-@endif
-@endif
-    <nav class="navbar transparent navbar-expand-md navbar-dark bg-dark ">
+
+        
+
+      <div class="container">
+        <div class="row">
+            <div class=" col-lg-2 col-md-2 col-sm-0 col-xs-0 style-college-logo">
+                <img src="{{asset('public/images/logo.png')}}" class="animated fadeInLeft img-responsive mx-auto" width="100%" alt="">
+            </div>
+            <div class=" col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <img src="{{asset('public/images/main-logo.png')}}" class="animated fadeInDown  img-responsive mx-auto " width="100%"  height="100%" alt="">
+            </div>
+        </div>
+      </div>
+
+
+    <div class="container sticky-top">
+    <nav class="navbar transparent navbar-expand-md navbar-dark navbar-color sticky-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,6 +25,9 @@
           </li>
           <li class="nav-item active">
               <a class="nav-link" href="{{route('index')}}">Blog <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{{route('donation')}}">Donation<span class="sr-only">(current)</span></a>
             </li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,7 +64,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('verify') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -77,7 +87,6 @@
                             </li>
                         @endguest
         </ul>
-
-        
       </div>
     </nav>
+    </div>

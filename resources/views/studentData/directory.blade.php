@@ -7,7 +7,7 @@
         <p class="lead">Renew bonds with old classmates, reach out to alumni with similar interests, network within your domains and catch up with alumni in your location.</p>
         <div class="container mx-auto">
             <div class="row">
-                    <a href="{{route('register')}}" target="_blank" class="animated fadeInLeft delay-2s mx-3 btn btn-success btn-lg ">Sign In</a>
+                    <a href="{{route('verify')}}" target="_blank" class="animated fadeInLeft delay-2s mx-3 btn btn-success btn-lg ">Sign In</a>
                     <a href="{{route('login')}}" target="_blank" class="animated fadeInRight delay-2s mx-3 btn btn-success btn-lg">Log In</a>        
             </div>
             </div>

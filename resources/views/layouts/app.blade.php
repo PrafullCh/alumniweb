@@ -19,9 +19,12 @@
     <!-- Bootsrtap CDN -->
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/menuBarStyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/svgstyle.css') }}" rel="stylesheet">
     <!-- Jquery -->
     <script src="{{ asset('public/js/app.js') }}" ></script>
     <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="public/js/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/73e553a836.js"></script>
     @if (isset($page))
               @if($page=="contact")
                     <link rel="stylesheet" href="public/fonts/icomoon/style.css">
@@ -45,9 +48,12 @@
               @if ($page=="directory")
                     <link href="{{ asset('public/css/borderHover.css') }}" rel="stylesheet">
               @endif
-
-              @if ($page=="yearbook")
-                    
+              @if ($page=="donation")
+                    <link href="public/donationStyle/css/font-awesome.min.css" rel="stylesheet">
+                    <link href="public/donationStyle/css/ionicons.min.css" rel="stylesheet">
+                    <link href="public/donationStyle/css/owl.carousel.min.css" rel="stylesheet">
+                    <!-- Main Stylesheet File -->
+                    <link href="public/donationStyle/css/style.css" rel="stylesheet">
               @endif
     @endif
     <style>
@@ -64,9 +70,7 @@
           font-size: 3.5rem;
         }
       }
-      body{
-        background-color:red !important;
-      }
+      
     </style>
 </head>
 <body @if(isset($page)) @if($page=="contact") data-spy="scroll" data-target=".site-navbar-target" data-offset="300" @endif @endif>

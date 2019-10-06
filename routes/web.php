@@ -15,16 +15,17 @@ Route::get('/', 'PagesController@index');
 Route::get('/index', 'PagesController@index')->name('index');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/contact', 'PagesController@contact')->name('contact');
-Route::get('/sample', 'PagesController@sample')->name('sample');
+Route::get('/donation', 'PagesController@donation')->name('donation');
 Route::get('/directory', 'PagesController@directory')->name('directory');
 Route::get('/yearbook', 'PagesController@yearbook')->name('yearbook');
 Route::any('/showdepartments/{year}', 'PagesController@showDept')->name('departments');
 Route::any('/showbatches/{year}/{dept}', 'PagesController@showBatches')->name('batches');
 Route::post('records','PagesController@directoryRecords');
-
+Route::post('/checkuser','Students@checkUser')->name('userregister');
+Route::get('/register', 'Students@verifyUser');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/verify', 'Students@verifyUser')->name('verify');
 Route::get('/users/logout','Auth\LoginController@userLogout')->name('user.logout');
 
 Route::prefix('admin')->group(function(){

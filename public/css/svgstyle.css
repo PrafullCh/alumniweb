@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url('http://localhost:82/alumniWeb/public/images/bg-img/i1-blur.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* top: 50%; */
+    left: 50%;
+    transform:translate(-50%,2%);
+}
+path{
+    stroke-dasharray: 572px;
+    stroke-dashoffset: 572px;
+    animation: mymove 4s ease forwards;
+}
+
+#main-page{
+    height: 66vh;
+    
+    /* filter: blur(8px); */
+}
+.navbar-color{
+    background-color:rgb(202, 189, 6);
+}
+
+.quote-style{
+    color: white;
+}
+@keyframes mymove
+{
+    from {
+        fill:  rgba(255, 255, 255,0.1);
+        
+    }
+    to {
+        stroke-dashoffset: 0px;
+        fill:  rgba(32, 35,48,1);
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #logo{
+        transform:scale(.72);
+        left: 0%;
+    }
+    .style-college-logo{
+        display:none;
+    }
+    #main-page{
+        padding-top: 50px;
+        height: 100vh;
+        
+        /* filter: blur(8px); */
+    }
+  }

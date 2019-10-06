@@ -31,6 +31,10 @@ class PagesController extends Controller
     {
         return view('studentData.directory')->with('page',"directory");
     }
+    public function donation()
+    {
+        return view('pages.donation')->with('page',"donation");
+    }
     public function yearbook()
     {
         return view('studentData.yearbook')->with('page',"yearbook");
