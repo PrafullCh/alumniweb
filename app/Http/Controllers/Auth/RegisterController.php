@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Storage;
 
 class RegisterController extends Controller
 {
@@ -37,7 +38,15 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        $ip_file = Storage::disk('local')->get('ip_registry.json');
+        $ip = json_decode($ip_file);
+        if(in_array($_SERVER['REMOTE_ADDR'],$ip->ip)!=1)
+        {
+            array_push($ip['ip'],$_SERVER['REMOTE_ADDR']);
+        }
+        Storage::put('ip_registry.json',json_encode($ip));
         $this->middleware('guest');
+        
     }
 
     /**

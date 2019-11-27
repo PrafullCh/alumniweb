@@ -1,9 +1,11 @@
 @extends('layouts/app')
 @section('content')
 
+<div id="student-image">
+<img src="{{asset('public/images/students.png')}}" alt="">
+</div>
   
   <main role="main">
-  
   <div id="main-page">
     <div class="container">
     <div class="row pt-4">
@@ -47,20 +49,10 @@
         </div>
         <div class="col-lg-2 col-md-2"></div>
     </div>
-</div>
+   
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+{{-- <img src="{{asset('public/images/bottom-border.png')}}" alt="" style="position:absolute;" height="100px"width="100%"> --}}
     <div class="container marketing">
   
       <!-- Three columns of text below the carousel -->
@@ -86,57 +78,100 @@
         </div><!-- /.col-lg-4 -->
         
       </div><!-- /.row -->
-  
-  
-      <!-- START THE FEATURETTES -->
-  
-      <hr class="featurette-divider">
-  
-      <div class="row featurette" style="background-color:rgba(255,255,255,0.5)">
-        <div class="col-md-7  align-items-center">
-          <h2 class="featurette-heading">From Principal </h2>
-          <small class="text-muted h4">Shri Dnyandeo P. Nathe</small>
-          <p class="lead text-justify">
-              Every stake holder is the most important visitor to our campus. He is not dependent on us. We are dependent on him. His visit is not interruption in our work. He is purpose of it. We are not doing favour by serving him. He is doing a favour by giving us the opportunity to do so. He is not outsider in our mission, he is part of it.</p>
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-12 word-photo-parent" id="principal-word"  data-aos="fade-up" data-aos-delay="50" >
+            <img src="{{asset('public/images/principal.JPG')}}" alt="" width="100%">
         </div>
-        <div class="col-md-5">
-            <img src="{{asset('public/images/principal.jpg')}}" width="500" height="500" style="margin-top:30px" alt="..." class="img-thumbnail">
+        <div class="col-lg-7 col-md-7 col-sm-12 word"  data-aos="fade-up" data-aos-delay="50" >
+            <h2>From Principal</h2>
+            <h3>Shri Dnyandeo P. Nathe</h3>
+            <p>
+                Every stake holder is the most important visitor to our campus. He is not dependent on us. We are dependent on him. His visit is not interruption in our work. He is purpose of it. We are not doing favour by serving him. He is doing a favour by giving us the opportunity to do so. He is not outsider in our mission, he is part of it.
+            </p>
+     <div class="container">
+           <h4><img src="{{asset('public/images/left-quote.png')}}" alt="" width="25px">
+                Every stake holder who visits us is not ousider, he is part of our mission
+            </h4>
         </div>
-      </div>
+    </div>
+</div>
+</div>
   
-      <hr class="featurette-divider">
-  
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-        </div>
-      </div>
-  
-      <hr class="featurette-divider">
-  
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-        </div>
-      </div>
-  
-      <hr class="featurette-divider">
-  
-      <!-- /END THE FEATURETTES -->
-  
-    </div><!-- /.container -->
-  
- 
-      </main>
-  <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></!--script>
-        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" ></script></-->
+     
+      {{-- cards-start--}} 
+
+      <div class="container card-deck mt-2 owl-carousel ">
         
+        <div class="card custom-card" data-aos="fade-left" data-aos-delay="50" >
+                <div class="card-header" style="padding:0;" >
+                    <h3>Duis excepteur aliqua Lorem dolor.Adipisicing veniam labore officia qui pariatur aliquip minim nisi elit duis deserunt officia laboris ullamco.</h3>
+                     <img src="{{asset('public/images/principal.JPG')}}" id="card-image"  alt="" width="100%"> 
+                </div>
+                
+                <div class="card-body"  style="padding:10px;padding-top:40px;">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                  <!-- <a href="#" class="btn btn-primary stretched-link">See Profile</a> -->
+                </div>
+              </div>
+            
+            
+                <div class="card custom-card" data-aos="fade-left" data-aos-delay="50">
+                    <div class="card-header" style="padding:0;">
+                        <h3>Duis exceptsficia qui pariatur aliquip minim nisi elit duis deserunt officia laboris ullamco.</h3>
+                             <img src="{{asset('public/images/principal.JPG')}}" id="card-image"  alt="" width="100%"> 
+                    </div>                           
+                    <div class="card-body"  style="padding:10px;padding-top:40px;">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <!-- <a href="#" class="btn btn-primary stretched-link">See Profile</a> -->
+                    </div>
+                </div>  
+      </div>
+      {{-- cards-end --}}  
+    </div>
+  
+    <div id="number">
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table">
+            <tr>
+              <td  id="colorlib-counter">
+                  <p style="text-align:center"><img src="{{asset('public/images/users.png')}}" width="90px" alt="" srcset=""></p>
+                  <p style="text-align:center;font-size:25px;">Total Number of Verified User</p>
+                <h1 style="text-align:center;" class="js-counter" data-from="0" data-to="{{$count}}" data-speed="5000" data-refresh-interval="50"></h1>
+              </td>
+              <td  id="colorlib-counter">
+                  <p style="text-align:center"><img src="{{asset('public/images/trophy.png')}}" width="90px" alt="" srcset=""></p>
+                  <p style="text-align:center;font-size:25px;">Distinguied Alumni alumni</p>
+                  <h1 style="text-align:center;" class="js-counter" data-from="0" data-to="2000" data-speed="5000" data-refresh-interval="50"></h1>
+              </td>
+            </tr>
+            <tr>
+                <td  id="colorlib-counter">
+                    <p style="text-align:center"><img src="{{asset('public/images/donate.png')}}" width="90px" alt="" srcset=""></p>
+                    <p style="text-align:center;font-size:25px;">Donation</p>
+                    <h1 style="text-align:center;" class="js-counter" data-from="0" data-to="2000" data-speed="5000" data-refresh-interval="50"></h1>
+                </td>
+                <td  id="colorlib-counter">
+                    <p style="text-align:center"><img src="{{asset('public/images/people.png')}}" width="90px" alt="" srcset=""></p>
+                    <p style="text-align:center;font-size:25px;">People Affected</p>
+                    <h1 style="text-align:center;" class="js-counter" data-from="0" data-to="2000" data-speed="5000" data-refresh-interval="50"></h1>
+                </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                  <p style="text-align:center"><img src="{{asset('public/images/visits.png')}}" width="90px" alt="" srcset=""></p>
+                  <p style="text-align:center;font-size:25px;">Visits</p>
+              <h1 style="text-align:center;" class="js-counter" data-from="0" data-to="{{$visits}}" data-speed="5000" data-refresh-interval="50"></h1>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</main>      
+  <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></!--script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" ></script></-->    
         @endsection

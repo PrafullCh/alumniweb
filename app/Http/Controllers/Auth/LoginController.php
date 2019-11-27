@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
+use Storage;
 class LoginController extends Controller
 {
     /*
@@ -26,7 +27,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -35,7 +36,15 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        $ip_file = Storage::disk('local')->get('ip_registry.json');
+        $ip = json_decode($ip_file);
+        if(in_array($_SERVER['REMOTE_ADDR'],$ip->ip)!=1)
+        {
+            array_push($ip['ip'],$_SERVER['REMOTE_ADDR']);
+        }
+        Storage::put('ip_registry.json',json_encode($ip));
         $this->middleware('guest',['except'=>['logout','userLogout']]);
+        
     }
     public function userLogout(Request $request)
     {

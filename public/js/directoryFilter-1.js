@@ -2,7 +2,7 @@
 
 var obj = {
     _token:$('meta[name="csrf-token"]').attr('content'),
-    searchfor:["student"],
+    searchfor:['alumni'],
     yearofgrad : null,
     branch:[],
     currloc:null,
@@ -171,7 +171,7 @@ function collectData(){
         for(i=0;i< profile.length;i++)
         {
             ////console.log("12");
-            stringToInsert += "<tr  data-aos='slide-up' data-aos-delay='1000'><td ><img src=\"public/images/"+ profile[i]+"\" class=\" mx-auto styleImg img-responsive img-fluid img-thumbnail\" alt=\"No Image\"></td><td><p>"+  firstname[i]+" "+  lastname[i]+"</p><p>"+ batch[i]+"</p><p>"+DEPT[i]+"</p><p>"+ clocation[i]+"</p></td></tr>";
+            stringToInsert += "<tr><td ><img src=\"public/images/"+ profile[i]+"\" class=\" mx-auto styleImg img-responsive img-fluid img-thumbnail\" alt=\"No Image\"></td><td><p>"+  firstname[i]+" "+  lastname[i]+"</p><p>"+ batch[i]+"</p><p>"+DEPT[i]+"</p><p>"+ clocation[i]+"</p></td></tr>";
         }
         ////console.log(stringToInsert);
         document.getElementById('content').innerHTML = "";

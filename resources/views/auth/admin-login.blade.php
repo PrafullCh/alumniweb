@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" style="padding:20px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card" >
                 <div class="card-header">{{ __('Admin Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body" style="padding:20px;">
                     <form method="POST" action="{{ route('admin.login.submit') }}">
                         @csrf
 

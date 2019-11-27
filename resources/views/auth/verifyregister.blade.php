@@ -4,13 +4,13 @@
 ?>
 
 @section('content')
-<div class="container">
+<div class="container p-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
+                <div class="card-body"  style="padding:20px">
                     <form method="POST" action="{{ route('userregister') }}">
                         @csrf
 

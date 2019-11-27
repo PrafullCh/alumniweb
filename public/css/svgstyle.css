@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image:url('http://localhost:82/alumniWeb/public/images/bg-img/i1-blur.jpg');
+    background-image: linear-gradient(to left,#f2f1d5,#edf1b6,#00d4ff);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,12 +30,46 @@ path{
     /* filter: blur(8px); */
 }
 .navbar-color{
-    background-color:rgb(202, 189, 6);
+    background:#616161d9;
 }
 
 .quote-style{
-    color: white;
+    color: rgb(0, 0, 0);
 }
+.navbar-nav .dropdown-menu{
+  background: inherit;
+}
+#navbar-style{
+  background-color: aquamarine;
+}
+
+.blog-cover{
+  background-image: url(http://localhost:82/alumniweb/public/images/blog-cover.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.blog-page-title{
+  background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 90px rgb(255,255,255);
+}
+.blog-cover h1{
+  user-select: none;
+}
+.blog-cell{
+  background-color: snow;
+}
+.blog-cell:nth-child(1){
+  border-left: 2px solid purple;
+}
+.blog-cell:nth-child(2){
+  border-left: 2px solid blue;
+}
+.blog-cell:nth-child(3){
+  border-left: 2px solid green;
+}
+
 @keyframes mymove
 {
     from {
@@ -63,4 +97,330 @@ path{
         
         /* filter: blur(8px); */
     }
+  }
+  #alumni-association{
+    /* Alumni Association */
+
+   
+        width: 540px;
+        height: 71px;
+        left: 361px;
+        top: 420px;
+
+        font-family: Scada;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 80px;
+        text-align: center;
+
+        color: #442626;
+        user-select:none;
+
+}	
+    #navbar-style{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        flex-direction: column;  
+    }
+
+    /* Alumni Association Government Polytechnic Nashik */
+#gpn{
+            width: 540px;
+            height: 31px;
+            left: 361px;
+            top: 420px;
+            font-family: Scada;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 22px;
+            text-align: center;
+            color: #442626; 
+            user-select:none;
+}
+#nav-title-color{
+    background: ;
+}
+.link-color{
+    color: rgb(0, 0, 0);
+}
+
+/* link transition */
+
+.link-transition-parent {
+    background: none;
+    border: 0;
+    font-size: inherit;
+    position: relative;
+    vertical-align: middle;
+  }
+  .link-transition-parent::before, .link-transition-parent::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .draw {
+    transition: color 0.1s;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+  }
+  .draw::before, .draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+  .draw::before {
+    top: 0;
+    left: 0;
+  }
+  .draw::after {
+    bottom: 0;
+    right: 0;
+  }
+  .draw:hover {
+    color: #000000;
+  }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .draw:hover::before {
+    border-top-color: #030303;
+    border-right-color: #030303;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  }
+  .draw:hover::after {
+    border-bottom-color: #030303;
+    border-left-color: #030303;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  }
+
+  a.draw.draw:hover.link-color.link-transition-parent.nav-link{
+    transition: all .3s ease-in-out;
+  }
+a.draw.draw:hover.link-color.link-transition-parent.nav-link:hover {
+    background-color: white;
+}
+#bell-icon{
+  transition: all .3s ease-in-out;
+}
+#bell-icon:hover{
+  background-color: black;
+  color: white;
+}
+
+.footer{
+	background: #152F4F;
+	color:white;
+  }
+  
+		.links ul {list-style-type: none;}
+		.links li a{
+		color: white;
+		transition: color .2s;
+		
+	  }
+	  .links li a:hover{
+		text-decoration:none;
+		color:#4180CB;
+		}
+	  
+	
+		.about-company i{
+		  font-size: 25px;
+		}
+		.about-company a{
+		color:white;
+		transition: color .2s;
+		/* &:hover{color:#4180CB} */
+	  }
+	 
+	.about-company .location{
+	  /* i{font-size: 18px;} */
+	}
+	.about-company .copyright p{
+		border-top:1px solid rgba(255,255,255,.1);
+	} 
+	#footer-brand{
+    text-align:center;
+		line-height: 27px;
+		height: 157px;
+	}
+  #footer-location{
+    padding-top: 25px;
+  }
+ 
+  #student-image{
+    position: absolute;
+    right: 0;
+    top: 31%;
+    height: 150px;
+  }
+  #student-image img {
+    float: right;
+    height: 259px;
+    width: 218px;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    border-color: black;
+    }
+    #toggle-button{
+      border: 1px solid;
+      padding: 6px;
+    }
+    #gallery-card .card{
+      border-radius: 10px;
+      border: 1px solid black;
+      box-shadow: 5px 5px 5px rgb(133, 206, 118), -1em 0 .4em rgb(137, 124, 167);
+    }
+  
+    #footer-link-title{
+      text-align: left;
+    }
+    #excerpt-line{
+      margin: 0;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 25px;
+    }
+    #blog-heading{
+      font-family: 'Alata', sans-serif;
+      font-size: 31px;
+    }
+    #read-more{
+      margin: 0;
+    }
+    #dropmenu{
+      background-color: #6f6c6cc2;
+      color: white;
+    }
+    #fndbatchmte{
+      background-color: #6f6c6cc2;
+      color: white;
+    }
+    #contact{
+      background-color: #6f6c6cc2;
+      color: white;
+    }
+
+    #markallbtn{
+      background-color: black;
+      color: white;
+    }
+    #markallbtn:hover{
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+    }
+    #login-page{
+      padding: 50px;
+    }
+    #email:focus{
+      border: none;
+    }
+    #number
+    {
+      width: 100%;
+      background-color: cornflowerblue;
+    }
+    @media only screen and (max-width: 800px){
+      .links li{
+        text-align: center;
+      }
+      #footer-link-title{
+        text-align: center;
+      }
+      #student-image{
+        display: none;
+      }
+      #main-page{
+        height: 40vh;
+      }
+      #blog-heading{
+        font-family: 'Alata', sans-serif;
+        font-size: 20px;
+      }
+    }
+@media only screen and (max-width: 650px) {
+    #alumni-association{
+            width: 100%;
+            height: 71px;
+            left: 361px;
+            top: 420px;
+            font-family: Scada;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 42px;
+            line-height: 76px;
+            text-align: center;
+            color: #442626;
+    }
+        #gpn{
+            width: 100%;
+            height: 38px;
+            left: 361px;
+            top: 420px;
+            font-family: Scada;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 26px;
+            line-height: 34px;
+            text-align: center;
+            color: #442626; 
+    }
+    #student-image{
+      display: none;
+    }
+    .card-body h4{
+      text-align:center;
+    }
+    
+  }
+  @media only screen and (max-width: 570px){
+    #gallery-card{
+      width: 280px;
+      margin: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #main-page{
+      padding-top: 82px;
+      height: 79vh;
+    }
+  }
+  @media only screen and (max-width: 350px){
+    #alumni-association{
+      width: 100%;
+      height: 71px;
+      left: 361px;
+      top: 420px;
+      font-family: Scada;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+    line-height: 76px;
+      text-align: center;
+      color: #442626;
+}
+  #gpn{
+      width: 100%;
+      height: 7px;
+      left: 361px;
+      top: 420px;
+      font-family: Scada;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 19px;
+      line-height: 0px;
+      text-align: center;
+      color: #442626; 
+}
+#main-page{
+  padding-top: 0;
+  height: 60vh;
+}
   }

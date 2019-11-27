@@ -5,14 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\studentdirectory;
 use DB;
-
+use Storage;
 class students extends Controller
 {
     
     public function verifyUser(Request $request)
     {
-        $request->session()->put('key', 'register');
-        return view('auth.verifyregister');
+        $settings  = Storage::disk('local')->get('settings.json');
+        $data = json_decode($settings,true);
+        if($data['register_view']==1)
+        {
+            $request->session()->put('key', 'register');
+            return view('auth.verifyregister');
+        }
+        else
+        {
+            return redirect('/');
+        }
+        
     }
     public function checkUser(Request $request)
     {

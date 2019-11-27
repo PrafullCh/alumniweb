@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
+<div class="container">
     <div class="animated fadeIn delay-1s jumbotron">
         <h1>Find your classmates</h1>
         <p class="lead">Renew bonds with old classmates, reach out to alumni with similar interests, network within your domains and catch up with alumni in your location.</p>
@@ -20,7 +20,7 @@
                 <div class="animated fadeIn delay-1s card ">
                     <h3 class=" font-weight-bold card-body text-center align-middle">Filters</h3>
                 </div>
-                <!--options1-->
+                {{-- <!--options1-->
                 <div  data-aos="flip-up" data-aos-delay="500"  class="col-md-12  customStyle align-middle text-center my-2 " data-toggle="collapse" data-target=".options">
                     <h4 class="my-2" id="style">Search For</h4>
                 </div>
@@ -28,7 +28,7 @@
                     <h5 class="checkbox col-md-12 text-center align-middle"><input type="checkbox" name="searchfor[]" onclick="searchforFunction(this.value)" value="alumni" class="inputStyle"><span class="borderStyle">Alumni</span></h5>
                     <h5 class="checkbox col-md-12 text-center align-middle"><input type="checkbox" name="searchfor[]" onclick="searchforFunction(this.value)" value="faculty" class="inputStyle"><span class="borderStyle">Faculty</span></h5>
                     <h5 class="checkbox col-md-12 text-center align-middle"><input type="checkbox" name="searchfor[]" onclick="searchforFunction(this.value)" value="student" class="inputStyle"><span class="borderStyle">Student</span></h5>
-                </div>
+                </div> --}}
                 <!--options2-->
                 <div data-aos="flip-up" data-aos-delay="500" class="col-md-12  customStyle text-center my-2" data-toggle="collapse" data-target=".options2" >
                     <h4 class="my-2 " >Year of Graduation</h4>
@@ -126,6 +126,7 @@
                 
             </div>
     </div>
+</div>
     <hr>
     <script type="text/javascript" src="{{ asset('public/js/directoryFilter-1.js') }}">    
     </script>

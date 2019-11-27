@@ -1,6 +1,7 @@
 .customStyle{
     border:1px grey solid ;
     transition:all .3s ease-in-out;
+    user-select: none;
 }
 .customStyle:hover{
     border-left: 1rem solid;
